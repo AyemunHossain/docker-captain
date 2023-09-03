@@ -8,9 +8,7 @@ Docker image related commands:
 5. To remove all docker images forcefully: `docker rmi $(docker images -q) -f`
 6. To print all docker images of a specific name: `sudo docker images <image-name>`
 7. Listing all image with full lenght id: `sudo docker images --no-trunc`
-8. You can filter docker image: `sudo docker --filter=reference='ubuntu'`
-
-
+8. You can filter docker image: `sudo docker --filter=reference='ubuntu'`   
 
 
 Docker container related commands:
@@ -35,3 +33,9 @@ Docker Port Mapping:
 Build Docker Image:
 ===================
 1. To build a docker image: `docker build -t <image_name> <path_to_dockerfile>`
+
+
+
+Docker networks:
+================
+1. To list all docker networks: `docker network ls`

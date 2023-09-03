@@ -1,0 +1,1 @@
+There are three types of Docker networks- default networks, user-defined networks, and overlay networks. 
