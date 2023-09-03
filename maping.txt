@@ -1,0 +1,13 @@
+1. With Dockerfile we build images, then we can run that images with `docker run` command and we can run multiple containers from one image.
+2. With docker-compose.yml we run containers.
+
+
+
+
+
+
+Dockerfile to Docker Container:
+===============================
+1. Develop your Dockerfile
+2. Build you docker image from Dockerfile: docker build -t <name>:<tag> <path>
+3. Run your docker image: docker run -p 9000:80 <image-name>:<tag>

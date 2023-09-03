@@ -1,0 +1,3 @@
+1. Download docker from : https://docs.docker.com/desktop/install/windows-install/
+2. Install docker
+3. Open powershell and run the following command to update wsl: wsl --update

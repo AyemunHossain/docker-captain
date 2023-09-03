@@ -1,0 +1,37 @@
+Docker image related commands:
+==============================
+1. To pull a docker image: `docker pull <image_name>`
+    1.1 You can pull image with specific tag: `sudo docker pull <image-name>:<tag-name>`
+2. To see all docker images: `docker images`
+3. To remove a docker image: `docker rmi <image_name>`
+4. To remove all docker images: `docker rmi $(docker images -q)`
+5. To remove all docker images forcefully: `docker rmi $(docker images -q) -f`
+6. To print all docker images of a specific name: `sudo docker images <image-name>`
+7. Listing all image with full lenght id: `sudo docker images --no-trunc`
+8. You can filter docker image: `sudo docker --filter=reference='ubuntu'`
+
+
+
+
+Docker container related commands:
+==================================
+1. To see running containers: `docker ps`
+2. To stop a container: `docker stop <container_id>`
+3. To start a container again: `docker start <container_id>`
+4. To remove a container: `docker rm {options} <container_id>` and options are: ( -f: forcefully, -l: remove link, -v: remove volume)
+5. To remove all containers: `docker rm $(docker ps -a -q)`
+6. To restart a container: `docker restart <container_id>`
+7. To inspect a container: `docker inspect <container_id>`
+8. To directly access the bash of a container (if it is running): `docker exec -it <container_id> bash`
+
+
+
+Docker Port Mapping:
+====================
+1. Basic port mapping: `docker run -p <host_port>:<container_port>`
+
+
+
+Build Docker Image:
+===================
+1. To build a docker image: `docker build -t <image_name> <path_to_dockerfile>`
