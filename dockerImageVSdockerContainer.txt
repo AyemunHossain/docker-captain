@@ -1,0 +1,17 @@
+| Docker Image                                                                                     | Docker Container                                               |
+|-------------------------------------------------                                 |-----------------------------------------------------------------|
+| It is a blueprint of the Container.                                                       | It is an instance of the Image.                                |
+| Image is a logical entity.                                                                | The container is a real-world entity.                          |
+| Images are created only once.                                                             | Containers are created any number of times using an image.     |
+| Images are immutable. One cannot attach volumes and networks.                             | Containers change only if the old image is deleted and a new one is used to build the container. One can attach volumes, networks, etc. |
+| Images do not require computing resources to work.                                        | Containers require computing 
+| resources to run as they run with a Docker Virtual Machine.                               |
+| To make a docker image, you have to write a script in a Dockerfile.                       | To make a container from an image, you have to run the “docker run <image>” command |
+| Docker Images are used to package up applications and pre-configured server environments. | Containers use server information and a file system provided by an image in order to operate. |
+| Images can be shared on Docker Hub.                                                       | It makes no sense in sharing a running entity; always docker images are shared. |
+| There is no such thing as a running state of a Docker Image.                              | Containers use RAM when created and in a running state. |
+| An image must not refer to any state to remove the image.                                 | A container must be in a running state to remove it. |
+| One cannot connect to the images as these images are like snapshots.                      | In this, one cannot connect to them and execute the commands. |
+| Sharing of Docker Images is possible.                                                     | Sharing of containers is not possible directly.                |
+| It has multiple read-only layers.                                                         | It has a single writable layer.                                |
+| These image templates can exist in isolation.                                             | These containers cannot exist without images.                  |

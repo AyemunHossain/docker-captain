@@ -21,7 +21,11 @@ Docker container related commands:
 6. To restart a container: `docker restart <container_id>`
 7. To inspect a container: `docker inspect <container_id>`
 8. To directly access the bash of a container (if it is running): `docker exec -it <container_id> bash`
-
+9. Remove all containers that are in existing state: `docker container prune`
+10. Add environment variables to a container: `docker run -d --name <name>  -e USERNAME=<***> -e  PASSWORD=<***>  --network <****> <image_name>`
+11. To see all kinds of container: `docker ps -a`
+12. To see all running container: `docker ps`
+13. To see all stopped container: `docker ps -f status=exited`
 
 
 Docker Port Mapping:
@@ -39,3 +43,17 @@ Build Docker Image:
 Docker networks:
 ================
 1. To list all docker networks: `docker network ls`
+
+
+
+Docker resources:
+=================
+1. To see docker resource usage: `docker stats`
+2. To see docker resource usage of a specific container: `docker stats <container_id>`
+
+
+Docker bridge: 
+==============
+1. Create a docker bridge: `docker network create <bridge_name>`
+2. List all container and their network: `docker network inspect bridge`
+3. To list all docker networks: `docker network ls`

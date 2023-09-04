@@ -1,0 +1,25 @@
+### Basic commands:
+
+1. Create a docker volume: `sudo docker volume create geeksforgeeks`
+2. Inspecting docker volume: `sudo docker volume inspect geeksforgeeks`
+3. Mounting docker volume to a specific container: `sudo docker run -it -v geeksforgeeks:/shared-volume --name my-container-01 ubuntu`
+
+
+
+
+
+
+
+### Simulate to sharing same volume between two containers:
+
+1. Mounting docker volume to a specific container: `sudo docker run -it -v geeksforgeeks:/shared-volume --name my-container-01 ubuntu`
+2. Create file inside the container:
+        `
+        ls
+        cd /shared-volume
+        echo “GeeksforGeeks” > geeksforgeeks.txt
+        ls
+        exit
+        `
+3. Then Mount another container to the same volume: `sudo docker run -it -v geeksforgeeks:/shared-volume --name my-container-02 ubuntu`
+4. Check the file inside the 2nd container: `cat /shared-volume/geeksforgeeks.txt`

@@ -1,0 +1,14 @@
+1. Create a Dockerfile: 
+                    FROM node:latest
+                    WORKDIR /app
+                    COPY package.json /app
+                    RUN npm install
+                    COPY . /app
+                    CMD ["npm", "start"]
+
+2. Build images from Dockerfile: 
+                    docker build -t docker-container-nodejs .
+3. Find your image: 
+                    docker images
+4. Run your image:
+                    docker run -p 3000:3000 docker-container-nodejs
