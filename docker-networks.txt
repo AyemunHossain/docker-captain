@@ -1,1 +1,25 @@
 There are three types of Docker networks- default networks, user-defined networks, and overlay networks. 
+
+
+Types of Network Drivers
+    1. bridge: If you build a container without specifying the kind of driver, the container will only be created in the bridge network, 
+                which is the default network. 
+    2. host: Containers will not have any IP address they will be directly created in the system network which will remove isolation between 
+                the docker host and containers. 
+    3. none: IP addresses won’t be assigned to containers. These containments are not accessible to us from the outside or from any other container.
+    4. overlay: overlay network will enable the connection between multiple Docker demons and make different Docker swarm services communicate with 
+                each other.
+    5. ipvlan: Users have complete control over both IPv4 and IPv6 addressing by using the IPvlan driver.
+    6. macvlan: macvlan driver makes it possible to assign MAC addresses to a container. 
+
+
+### Start a container with static IP address: 
+    1. Create a network: `docker network create test1`
+    2. Start a container with static IP address: `docker run -itd --name test1 --network test1 --ip <ip-range-from-subnet>`
+    3. Check the IP address of the container: `docker inspect test1`
+    4. Ping the container from the host: `ping <ip-address-of-container>`
+    
+    If it's working, then the container is able to connect with the specified IP address.
+
+
+* Connect a running container to a network: `docker network connect <network-name> <container-name>`

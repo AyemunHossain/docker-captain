@@ -11,6 +11,8 @@ Docker image related commands:
 8. You can filter docker image: `sudo docker --filter=reference='ubuntu'`   
 
 
+
+
 Docker container related commands:
 ==================================
 1. To see running containers: `docker ps`
@@ -26,11 +28,15 @@ Docker container related commands:
 11. To see all kinds of container: `docker ps -a`
 12. To see all running container: `docker ps`
 13. To see all stopped container: `docker ps -f status=exited`
+14. Tell Docker to execute a command inside a container: `docker exec`
+
+
 
 
 Docker Port Mapping:
 ====================
 1. Basic port mapping: `docker run -p <host_port>:<container_port>`
+
 
 
 
@@ -40,9 +46,11 @@ Build Docker Image:
 
 
 
+
 Docker networks:
 ================
 1. To list all docker networks: `docker network ls`
+
 
 
 
@@ -50,6 +58,7 @@ Docker resources:
 =================
 1. To see docker resource usage: `docker stats`
 2. To see docker resource usage of a specific container: `docker stats <container_id>`
+
 
 
 Docker bridge: 

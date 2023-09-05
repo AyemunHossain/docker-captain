@@ -1,0 +1,39 @@
+### Install linux package in docker container:
+
+    1. Get inside the container:
+        docker exec -it <container_id> bash
+    2. Update the package list:
+        apt-get update
+    3. Install the package:
+        apt-get install <package_name>
+    4. Exit the container:
+        exit
+
+
+    >>> You can do the same things with the Dockerfile: 
+        FROM ubuntu:latest
+        RUN apt-get update && apt-get install -y <package_name>
+    
+### How to copy docker file to your host machine:
+
+    1. Get inside the container:
+        docker exec -it <container_id> bash
+    2. Create a file in the container:
+        touch <file_name>
+    3. Exit the container:
+        exit
+    4. Copy the file from the container to the host machine:
+        docker cp <container_id>:<file_name> <host_path>
+
+
+### How to copy file from host machine to docker container:
+
+        1. Copy the file from the host machine to the container:
+            docker cp <host_path> <container_id>:<file_name>
+        2. Get inside the container:
+            docker exec -it <container_id> bash
+        3. Check if the file is copied:
+            ls
+        4. Exit the container:
+            exit
+
