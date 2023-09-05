@@ -1,0 +1,16 @@
+* Docker linking is a legacy feature of Docker that may eventually be deprecated. It is recommended to use Docker networks instead.
+
+## Docker networks
+    1. Create a network
+        docker network create my-network
+    2. Run a container in the network
+        docker run -d --name my-nginx --network my-network nginx
+    3. Run another container in the network
+        docker run -d --name my-httpd --network my-network httpd
+    4. Inspect the network
+        docker network inspect my-network
+    
+    
+    *** You can also connect a running container to a network
+        docker network connect my-network my-redis
+   

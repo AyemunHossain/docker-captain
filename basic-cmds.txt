@@ -66,3 +66,9 @@ Docker bridge:
 1. Create a docker bridge: `docker network create <bridge_name>`
 2. List all container and their network: `docker network inspect bridge`
 3. To list all docker networks: `docker network ls`
+
+
+Docker logs:
+============
+1. To see logs of a container: `docker logs <container_id>`
+2. To see logs of a container in real time: `docker logs -f <container_id>`
