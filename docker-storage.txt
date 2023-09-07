@@ -1,0 +1,25 @@
+
+-> Docker storage distinguishes three storage types. 
+    Two types are permanent: Docker volumes and bind Mounts and the third way of writing data is tmpfs. 
+    From the container perspective, it doesn’t know what sort of storage is in use.
+
+
+-> Volumes are great when you need to share data (or state) between containers, by mounting the same volume in 
+    multiple containers. Though take note: it's important to implement locks or some other concurrent write access protection.
+
+
+
+### General docker commands:
+1. Docker storage info: `docker info`
+2. You can inspect an storage and save it on a file: `docker inspect <storage> > storage_information.json`
+3. Simply map a storage to a container: `docker run -v <storage>:<container_storage> <image>`
+
+
+### Create docker volume:
+1. Create a volume: `sudo docker volume create –-name = <volume name> –opt o = size = 100m`
+2. Create a volume with a specific driver: `sudo docker volume create –-name = <volume name> –-driver = <driver name>`
+3. Create a volume with a specific driver and options: `sudo docker volume create –-name = <volume name> –-driver = <driver name> –-opt o = size = 100m`
+
+
+
+### Container's file system: 
