@@ -13,6 +13,14 @@ Types of Network Drivers
     6. macvlan: macvlan driver makes it possible to assign MAC addresses to a container. 
 
 
+
+### Docker bridge: 
+=================
+1. Create a docker bridge: `docker network create <bridge_name>`
+2. List all container and their network: `docker network inspect bridge`
+3. To list all docker networks: `docker network ls`
+
+
 ### Start a container with static IP address: 
     1. Create a network: `docker network create test1`
     2. Start a container with static IP address: `docker run -itd --name test1 --network test1 --ip <ip-range-from-subnet>`
@@ -23,3 +31,14 @@ Types of Network Drivers
 
 
 * Connect a running container to a network: `docker network connect <network-name> <container-name>`
+* Disconnect a running container from a network: `docker network disconnect <network-name> <container-name>`
+
+
+
+### Ping between two containers: 
+    1. Create a network: `docker network create test1`
+    2. Start two containers with static IP address: `docker run -itd --name test1 --network test1 --ip <ip-range-from-subnet>`
+    3. Check the IP address of the container: `docker inspect test1`
+    4. Ping the container from the host: `ping <ip-address-of-container>`
+    
+    If it's working, then the container is able to connect with the specified IP address.

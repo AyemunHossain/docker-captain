@@ -1,0 +1,16 @@
+Docker container related commands:
+==================================
+1. To see running containers: `docker ps`
+2. To stop a container: `docker stop <container_id>`
+3. To start a container again: `docker start <container_id>`
+4. To remove a container: `docker rm {options} <container_id>` and options are: ( -f: forcefully, -l: remove link, -v: remove volume)
+5. To remove all containers: `docker rm $(docker ps -a -q)`
+6. To restart a container: `docker restart <container_id>`
+7. To inspect a container: `docker inspect <container_id>`
+8. To directly access the bash of a container (if it is running): `docker exec -it <container_id> bash`
+9. Remove all containers that are in existing state: `docker container prune`
+10. Add environment variables to a container: `docker run -d --name <name>  -e USERNAME=<***> -e  PASSWORD=<***>  --network <****> <image_name>`
+11. To see all kinds of container: `docker ps -a`
+12. To see all running container: `docker ps`
+13. To see all stopped container: `docker ps -f status=exited`
+14. Tell Docker to execute a command inside a container: `docker exec`

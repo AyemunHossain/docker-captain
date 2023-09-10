@@ -1,0 +1,10 @@
+### Seee what's going inside the docker containers: 
+    * docker container top <container_name> : Its' like normal `ps top` of linux
+    * docker container inspect <container_name> : It will give you all the details of the container configuration
+    * docker container stats <container_name> : It will give you the stats of the container like CPU, Memory, Network, etc.
+
+
+### Types of interactive shell in docker cotainer: 
+    * docker container run -it <container_name> : Thuse you will have an interactive shell and run at a time.
+    * docker container exec -it <container_name> <cmd> : You can run any cmd inside the container in already running container.
+    
