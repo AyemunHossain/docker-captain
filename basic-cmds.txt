@@ -3,12 +3,9 @@ Docker Port Mapping:
 1. Basic port mapping: `docker run -p <host_port>:<container_port>`
 
 
-
-
 Build Docker Image:
 ===================
 1. To build a docker image: `docker build -t <image_name> <path_to_dockerfile>`
-
 
 
 
@@ -18,11 +15,12 @@ Docker networks:
 
 
 
-
 Docker resources:
 =================
 1. To see docker resource usage: `docker stats`
 2. To see docker resource usage of a specific container: `docker stats <container_id>`
+
+
 
 Docker logs:
 ============
