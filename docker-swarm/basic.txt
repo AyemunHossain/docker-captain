@@ -1,0 +1,19 @@
+** Simply Docker Swarm is mainly used to deploy, scale, and manage the containers and nodes which are available in the cluster.
+
+There are two types of nodes in Docker Swarm:
+    1. Manager node: Carries out and oversees cluster-level duties. 
+    2. Worker node: Receives and completes the tasks set by the manager node.
+
+
+*** By default docker swarm is not enabled. To enable docker swarm we need to run the following command:**
+```docker swarm init```
+
+*** To check the status of the swarm we can run the following command:**
+```docker info```
+
+*** To add worker or manager swarm node we can run the following command:**
+```docker swarm join-token manager```
+```docker swarm join-token worker```
+   
+   > These will return the command to add the node to the swarm.
+

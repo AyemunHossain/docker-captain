@@ -1,0 +1,17 @@
+version: '1'
+
+services:
+  proxy:
+    image: nginx-custom
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - '8080:80'
+    volumes:
+      - nginx-vol:/etc/nginx/nginx.conf
+    networks:
+      - my_custom_network
+    container_name:
+      - proxy
