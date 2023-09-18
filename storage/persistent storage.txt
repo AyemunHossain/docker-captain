@@ -3,3 +3,23 @@
 3. Volume-driver: The volume-driver flag is used to mention the driver we want to use for the volume.
 4. Volume-opt: The volume-opt flag is used to mention the options we want to use for the volume.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Practice: 
+
+1. Bind: 
+        

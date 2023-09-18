@@ -22,4 +22,6 @@
 
 
 
-### Container's file system: 
+### You can create a named valume during run of a continer:
+ docker run -dit -v name:/var/lib/
+ 
