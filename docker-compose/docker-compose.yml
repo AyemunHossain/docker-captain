@@ -1,0 +1,27 @@
+version: '1'
+
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - '8080:80'
+    volumes:
+      - nginx-vol:/etc/nginx/nginx.conf
+    networks:
+      - my_custom_network
+    container_name:
+      - proxy
+
+  web:
+    image: httpd:latest
+    networks:
+      - my_custom_network
+    container_name:
+      - web
+
+networks:
+  my_custom_network:
+    driver: bridge
+
+volumes:
+  nginx-vol:

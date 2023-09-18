@@ -1,4 +1,22 @@
-1. Mount: The mount flag is used to mention the kind of persistence we require.
+key points:
+
+1. Mount: The mount flag is used to mention the kind of persistence we require. =( It could be bind, tmpfs, or volume)
+
+            * bind: It is used to mount a file or directory from the host machine to the container. 
+                     -> It allows you to access files and directories from the host within the container.
+                     -> It is used to share files between the host and the container.
+
+                     docker run -d -p 5002:5000 --name container2 --mount type=volume, source="my_volume", target=/app/docker_bind create_file_py_image
+                     
+
+            * tmpfs: It is used to mount a temporary file system inside the container.
+                     -> It is used to store temporary files.
+                     -> It is stored in the host machine’s memory.
+
+            * volume: It is used to mount a volume inside the container.
+                     -> It is used to store data in a separate location from the container.
+                     -> It is stored in the host machine’s file system.
+
 2. Volume: The volume flag is used to mention the name of the volume we want to create.
 3. Volume-driver: The volume-driver flag is used to mention the driver we want to use for the volume.
 4. Volume-opt: The volume-opt flag is used to mention the options we want to use for the volume.

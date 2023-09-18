@@ -1,0 +1,8 @@
+*** Services are like groups of containers:
+
+        When you're building a backend application, you often have different parts or microservices that need to work together, 
+        like a web server, a database, and maybe a cache. In Docker, a "service" is like a group of containers that work together 
+        as a team to provide a part of your application's functionality.
+
+** Raft Algorithm: Docker swarm uses this to manage the nodes.
+

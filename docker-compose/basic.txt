@@ -1,0 +1,19 @@
+1. You can run and build image from source code
+
+
+** Specify Dockerfile for a container
+
+```
+    version: '3.1'
+
+    services:
+      proxy:
+
+        build:
+            context: .
+            dockerfile: nginx.Dockerfile     <-------- That how you can specify the Dockerfile where
+
+        image: nginx-custom                  <-------- That how you can specify the image name, first it will check the image and it will not going to 
+        ports:                                        - Have that image on local machine. So it it will try to build image, and we give it a instruction
+          - "5000:80"                                 - To build the image.
+``` 

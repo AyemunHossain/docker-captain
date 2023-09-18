@@ -1,0 +1,9 @@
+1. You will need to install docker-machine
+
+
+### Creating a docker node
+   > docker-machine create node1
+
+### Access to docker node
+   > docker-machine ssh node1
+
