@@ -42,3 +42,11 @@ Types of Network Drivers
     4. Ping the container from the host: `ping <ip-address-of-container>`
     
     If it's working, then the container is able to connect with the specified IP address.
+
+
+
+### Create a overly network: 
+    1. Create a overly network: `docker network create -d overlay test1`
+    2. List all overly networks: `docker network ls`
+    
+    If it's working, then the container is able to connect with the specified IP address.

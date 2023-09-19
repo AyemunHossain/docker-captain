@@ -6,3 +6,16 @@
 
 ** Raft Algorithm: Docker swarm uses this to manage the nodes.
 
+
+
+Create a sevice: 
+        docker service create --name web nginx
+
+List services:
+        docker service ls
+
+Inspect a service:
+        docker service inspect web
+
+create a service under a network: 
+        docker service create --name psql --network mydrupal -e POSTGRES_PASSWORD=mypass postgres
