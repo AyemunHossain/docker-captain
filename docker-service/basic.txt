@@ -8,6 +8,11 @@
 
 
 
+** So you can create service with the manager node then the manager node will distribute the service to the worker nodes.
+   > Any service you create on manager node will be distributed to the worker nodes.
+   > You can create a service on a worker node but it will not be distributed to the other nodes.
+
+
 Create a sevice: 
         docker service create --name web nginx
 
