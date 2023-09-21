@@ -5,11 +5,6 @@
 3. Mounting docker volume to a specific container: `sudo docker run -it -v geeksforgeeks:/shared-volume --name my-container-01 ubuntu`
 
 
-
-
-
-
-
 ### Simulate to sharing same volume between two containers:
 
 1. Mounting docker volume to a specific container: `sudo docker run -it -v geeksforgeeks:/shared-volume --name my-container-01 ubuntu`

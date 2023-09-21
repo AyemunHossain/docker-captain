@@ -5,7 +5,7 @@ key points:
             * bind: It is used to mount a file or directory from the host machine to the container. 
                      -> It allows you to access files and directories from the host within the container.
                      -> It is used to share files between the host and the container.
-
+                     -> Typically this will gonna be a dire
                      docker run -d -p 5002:5000 --name container2 --mount type=volume, source="my_volume", target=/app/docker_bind create_file_py_image
                      
 
@@ -16,6 +16,7 @@ key points:
             * volume: It is used to mount a volume inside the container.
                      -> It is used to store data in a separate location from the container.
                      -> It is stored in the host machine’s file system.
+                     -> Also working like named volume.
 
 2. Volume: The volume flag is used to mention the name of the volume we want to create.
 3. Volume-driver: The volume-driver flag is used to mention the driver we want to use for the volume.
