@@ -8,6 +8,9 @@ There are two types of nodes in Docker Swarm:
 *** By default docker swarm is not enabled. To enable docker swarm we need to run the following command:**
 ```docker swarm init```
 
+*** Configuring docker swarm on server can needed the advertise ip option:
+  docker swarm init --advertise-addr <ip>
+
 *** To check the status of the swarm we can run the following command:**
 ```docker info```
 
@@ -17,3 +20,11 @@ There are two types of nodes in Docker Swarm:
    
    > These will return the command to add the node to the swarm.
 
+
+*** You can updates roles of your worker node 
+    docker node update --role manager node2
+
+
+
+*** So then we will create service
+*** Then service will distribute the task over nodes
