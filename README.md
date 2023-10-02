@@ -6,7 +6,7 @@ A learing resources of docker, docker-compose, docker-swarm, kubernetes, etc.
 
 ## Motivation
 
-I want to learn docker and kubernetes, so I create this project to record my learning process. I hope this project can help you. If you have any questions, please contact me. My email is [ ](mailto:ayemunh@gmail.com)
+I want to learn docker and kubernetes, so I create this project to record my learning process. I hope this project can help you. If you have any questions, please contact me. My email is: ayemunh@gmail.com
 
 ## Table of Contents
 
@@ -72,6 +72,6 @@ I want to learn docker and kubernetes, so I create this project to record my lea
 ## Installation
 
 ```bash
-    git clone
+    git clone https://github.com/AyemunHossain/docker-captain
 ```
 
