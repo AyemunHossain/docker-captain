@@ -1,0 +1,44 @@
+1. From host machine: (Most secure way)
+            environment:
+                - MY_VARIABLE=${MY_VARIABLE}
+
+2. Row value on compose file: (Not secure way)
+            environment:
+                - MY_VARIABLE=MY_VALUE
+
+3. From .env file: (Not secure way)
+            env_file:
+                - .env
+
+
+
+CUSTOMIZE ENVIRONMENT VARIABLES: (Not secure way)
+--------------------------------------------------
+
+1. From .env file and override on compose file: (Not secure way)
+            env_file:
+                - .env
+            environment:
+                - MY_VARIABLE=MY_VALUE
+
+2. From .env file and override on host machine: (Not secure way)
+            env_file:
+                - .env
+            environment:
+                - MY_VARIABLE=${MY_VARIABLE}
+
+3. From .env file and override on host machine and compose file: (Not secure way)
+            env_file:
+                - .env
+            environment:
+                - MY_VARIABLE=${MY_VARIABLE}
+                - MY_VARIABLE=MY_VALUE
+
+4. From .env file and override on host machine and compose file and override on container: (Not secure way)
+
+            env_file:
+                - .env
+            environment:
+                - MY_VARIABLE=${MY_VARIABLE}
+                - MY_VARIABLE=MY_VALUE
+            command: ["sh", "-c", "echo $MY_VARIABLE"]

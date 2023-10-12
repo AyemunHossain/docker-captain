@@ -1,0 +1,2 @@
+1. To compose a specifc services without cache: docker-compose build --no-cache my-service
+2. 
